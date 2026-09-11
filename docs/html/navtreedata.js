@@ -25,13 +25,24 @@
 var NAVTREE =
 [
   [ "ELD Console Java", "index.html", [
-    [ "ELD Console based App", "index.html", "index" ]
+    [ "ELD Console based App", "index.html", "index" ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"_e_l_d_calculator_8java.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

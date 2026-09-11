@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ELD Console Java: ELD Console based App</title>
+<title>ELD Console Java: InputLoader Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_input_loader.html','','class_input_loader-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -107,38 +107,71 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">ELD Console based App </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">InputLoader Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="mainpage"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
-🚀 Features</h1>
-<ul>
-<li>Modular generator modeling with cost coefficients</li>
-<li>Load validation and dispatch optimization</li>
-<li>Clean documentation powered by Doxygen</li>
+
+<p>Utility class for handling user input related to generator parameters.  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a55a467c81e7c12fbd197c9c2e6f79873" id="r_a55a467c81e7c12fbd197c9c2e6f79873"><td class="memItemLeft">static ArrayList&lt; <a class="el" href="class_generator.html">Generator</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a55a467c81e7c12fbd197c9c2e6f79873">loadFromUser</a> ()</td></tr>
+<tr class="memdesc:a55a467c81e7c12fbd197c9c2e6f79873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts the no.of generators and generator parameters for each one as inputs from the user , creates generator object for each generator, adds all of them into arraylist and returns the arraylist.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility class for handling user input related to generator parameters. </p>
+<p>Prompts the user to enter total load demand, number of generators, and each generator's cost coefficients and capacity limits.</p>
+<p>Creates and returns a list of <a class="el" href="class_generator.html" title="Stores details about each generator and calculates its cost for a given output.">Generator</a> objects for further dispatch logic.</p>
+<dl class="section author"><dt>Author</dt><dd>Sree Sai Nandini </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a55a467c81e7c12fbd197c9c2e6f79873" name="a55a467c81e7c12fbd197c9c2e6f79873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a467c81e7c12fbd197c9c2e6f79873">&#9670;&#160;</a></span>loadFromUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt; <a class="el" href="class_generator.html">Generator</a> &gt; InputLoader.loadFromUser </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accepts the no.of generators and generator parameters for each one as inputs from the user , creates generator object for each generator, adds all of them into arraylist and returns the arraylist. </p>
+<dl class="section return"><dt>Returns</dt><dd>genlist the arraylist of generator objects </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>src/<a class="el" href="_input_loader_8java.html">InputLoader.java</a></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-📦 Modules</h1>
-<ul>
-<li><span class="tt"><a class="el" href="class_generator.html" title="Stores details about each generator and calculates its cost for a given output.">Generator</a></span> – Handles cost and capacity constraints</li>
-<li><span class="tt"><a class="el" href="class_input_loader.html" title="Utility class for handling user input related to generator parameters.">InputLoader</a></span> – Handles user input</li>
-<li><span class="tt"><a class="el" href="class_e_l_d_calculator.html" title="Calculator class for performing Lambda Iteration-based Economic Load Dispatch.">ELDCalculator</a></span> – Calculates economic load dispatch power using lambda iteration</li>
-<li><span class="tt">Main</span> – The console-based application that connects all modules</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-👩‍💻 Author</h1>
-<p>Created by Sree Sai Nandini <br  />
- Azure-certified | Portfolio-driven | Joyful engineering ✨ </p>
-</div></div><!-- PageDoc -->
-<a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="class_input_loader.html">InputLoader</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>
