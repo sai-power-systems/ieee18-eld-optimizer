@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validatepower_0',['validatePower',['../class_generator.html#a89d21126e659f6452659db3f63500852',1,'Generator']]]
+  ['plot_5fcost_5fcurve_0',['plot_cost_curve',['../class_main.html#af36393c29723172743f219402af4bdca',1,'Main']]]
 ];
