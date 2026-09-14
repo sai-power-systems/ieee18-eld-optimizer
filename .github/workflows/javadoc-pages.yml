@@ -24,7 +24,7 @@ jobs:
 
       - name: Generate Javadoc
         run: |
-          javadoc -d docs src/main/java/*.java
+          javadoc -d docs/javadoc src/main/java/*.java
 
       - name: Commit and Push Docs
         run: |
