@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add docs/
+          git add docs/javadoc/
           git commit -m "📚 Auto-update Javadoc $(git rev-parse --short HEAD)"
           git push
         continue-on-error: true
