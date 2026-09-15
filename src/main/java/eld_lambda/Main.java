@@ -1,5 +1,5 @@
 /**
- * Main class to test the ELD Logic
+ * @brief Main class to test the ELD Logic
  *
  * imports all the other modules and tests the application end to end
  */
@@ -8,6 +8,12 @@ package eld_lambda;
 import java.util.*;
 public class Main {
 
+    /**
+     * Creates a list of costs.
+     * @param genlist List of Generators
+     * @param power The power at which cost is calculated
+     * @return cost Arraylist of costs for each generator
+     */
     public static ArrayList<Float> plot_cost_curve(Generator[] genlist,float[] power){
         ArrayList<Float> cost = new ArrayList<>();
         for (int i = 0; i < genlist.length; i++) {
