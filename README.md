@@ -56,6 +56,6 @@ classDiagram
 
 
 ## Documentation
-[View code documentation](./docs/html/index.html)
+[View code documentation](./docs/javadoc/index.html)
 
 
