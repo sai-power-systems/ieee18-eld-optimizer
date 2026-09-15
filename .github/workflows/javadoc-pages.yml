@@ -1,38 +1,50 @@
-name: Generate & Deploy Javadoc
+name: Generate & Push Javadoc
 
 on:
   push:
     branches: [ main ]
 
+# Grants write access so GitHub Actions can push commits back to your repository
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
-          java-version: '24' # or your version
+          java-version: '24'
           distribution: 'temurin'
 
       - name: Run Checkstyle
         run: |
-          curl -O https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.1/checkstyle-10.12.1-all.jar
+          curl -O https://github.com
           java -jar checkstyle-10.12.1-all.jar -c checkstyle.xml src/ || true
 
+      # Safely finds all Java files recursively and passes them directly to the javadoc tool
       - name: Generate Javadoc
         run: |
-          javadoc -d docs/javadoc src/main/java/*.java
+          mkdir -p docs/javadoc
+          find src/main/java -name "*.java" > files.txt
+          javadoc -d docs/javadoc @files.txt
+          rm files.txt
 
+      # Commits the generated HTML documentation files directly into your repository
       - name: Commit and Push Docs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add docs/javadoc/
-          git commit -m "📚 Auto-update Javadoc $(git rev-parse --short HEAD)"
-          git push
-        continue-on-error: true
+          
+          # Only commit and push if changes are detected to avoid workflow errors
+          if ! git diff --cached --quiet; then
+            git commit -m "📚 Auto-update Javadoc $(git rev-parse --short HEAD)"
+            git push
+          else
+            echo "No changes detected in Javadoc."
+          fi

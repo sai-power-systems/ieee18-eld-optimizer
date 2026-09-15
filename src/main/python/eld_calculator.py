@@ -62,7 +62,7 @@ class ELDCalculator:
 
                 for i, g in enumerate(self.generators):
                     print(
-                        f"Generator {g.gen_id} Output = "
+                        f"eld_lambda.Generator {g.gen_id} Output = "
                         f"Power {power} MW"
                     )
 

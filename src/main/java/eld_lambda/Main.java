@@ -1,3 +1,5 @@
+package eld_lambda;
+
 import java.util.*;
 public class Main {
 
@@ -18,7 +20,7 @@ public class Main {
         Generator[] generators = new Generator[3];
 
         generators[0] = new Generator(
-                1,      // Generator ID
+                1,      // eld_lambda.Generator ID
                 50,     // Min capacity
                 200,    // Max capacity
                 500f,   // a
@@ -62,7 +64,7 @@ public class Main {
 
         for (int i = 0; i < dispatch.length; i++) {
             System.out.printf(
-                    "Generator %d Output = %.3f MW%n",
+                    "eld_lambda.Generator %d Output = %.3f MW%n",
                     generators[i].getGen_id(),
                     dispatch[i]
             );

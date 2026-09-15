@@ -1,3 +1,5 @@
+package eld_lambda;
+
 /**
  * Stores details about each generator and calculates its cost for a given output.
  *
@@ -12,7 +14,7 @@
  *
  * <p><b>Methods:</b></p>
  * <ul>
- *   <li><code>Generator(...)</code> — Constructor to initialize generator parameters</li>
+ *   <li><code>eld_lambda.Generator(...)</code> — Constructor to initialize generator parameters</li>
  *   <li><code>calculateCost(float power)</code> — Calculates cost for given power</li>
  *   <li><code>isWithinLimits(float power)</code> — Checks if power is within capacity bounds</li>
  * </ul>
@@ -29,7 +31,7 @@ public class Generator{
 
 
     /**
-     * The parameterised constructor for Generator class. It initiates an object with required parameters.
+     * The parameterised constructor for eld_lambda.Generator class. It initiates an object with required parameters.
      * @param gen_id (int)- The generator id(a unique identifier)
      * @param min_capacity (int) - The minimum power capacity of the generator
      * @param max_capacity (int) - The maximum power capacity of the generator
@@ -78,7 +80,7 @@ public class Generator{
 
     /**
      * Getter method for generator id
-     * @return gen_id Generator id
+     * @return gen_id eld_lambda.Generator id
      */
     public int getGen_id() {
         return gen_id;
@@ -86,7 +88,7 @@ public class Generator{
 
     /**
      * Setter method for generator id
-     * @param gen_id Generator id
+     * @param gen_id eld_lambda.Generator id
      */
     public void setGen_id(int gen_id) {
         this.gen_id = gen_id;

@@ -1,3 +1,5 @@
+package eld_lambda;
+
 /**
  * Calculator class for performing Lambda Iteration-based
  * Economic Load Dispatch (ELD).
@@ -31,7 +33,7 @@ public class ELDCalculator {
      * Constructor
      *
      * @param numGenerators Number of generators
-     * @param genArray Array of Generator objects
+     * @param genArray Array of eld_lambda.Generator objects
      * @param totDemand Total system demand (MW)
      */
     public ELDCalculator(int numGenerators,
@@ -119,7 +121,7 @@ public class ELDCalculator {
 
                 for (int i = 0; i < numGenerators; i++) {
                     System.out.printf(
-                            "Generator %d Output = %.3f MW%n",
+                            "eld_lambda.Generator %d Output = %.3f MW%n",
                             genArray[i].getGen_id(),
                             P[i]);
                 }

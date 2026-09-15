@@ -24,7 +24,7 @@ def plot_power_distribution(generators, dispatch):
     )
 
     plt.title("Economic Load Dispatch")
-    plt.xlabel("Generator")
+    plt.xlabel("eld_lambda.Generator")
     plt.ylabel("Power Output (MW)")
     plt.grid(axis="y", linestyle="--", alpha=0.4)
     plt.savefig("./data/power_output.jpg")
@@ -48,8 +48,8 @@ def plot_cost_distribution(generators, dispatch):
         color="orange"
     )
 
-    plt.title("Generator Operating Cost")
-    plt.xlabel("Generator")
+    plt.title("eld_lambda.Generator Operating Cost")
+    plt.xlabel("eld_lambda.Generator")
     plt.ylabel("Cost")
 
     plt.grid(axis="y", linestyle="--", alpha=0.4)
@@ -80,7 +80,7 @@ def plot_cost_curves(generators):
             label=f"G{g.gen_id}"
         )
 
-    plt.title("Generator Cost Curves")
+    plt.title("eld_lambda.Generator Cost Curves")
     plt.xlabel("Power Output (MW)")
     plt.ylabel("Operating Cost")
     plt.grid(True)

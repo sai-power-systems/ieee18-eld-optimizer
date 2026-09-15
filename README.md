@@ -21,7 +21,7 @@ $$
 
 ```mermaid
 classDiagram
-    class Generator {
+    class eld_lambda.Generator {
         - int gen_id
         - float min_capacity
         - float max_capacity
@@ -37,21 +37,21 @@ classDiagram
         + void setC(float c)
     }
     
-    class InputLoader{
-        + ArrayList<Generator> loadFromUser()
+    class eld_lambda.InputLoader{
+        + ArrayList<eld_lambda.Generator> loadFromUser()
     }
     
-    class ELDCalculator {
+    class eld_lambda.ELDCalculator {
         - float lambda
-        - Generator[] genArray
+        - eld_lambda.Generator[] genArray
         - float tot_demand
         - float tolerance
         - int max_iterations
         + float[] lambdaIteration()
     }
 
-    Generator <|-- ELDCalculator : uses
-    Generator <|-- InputLoader : uses
+    eld_lambda.Generator <|-- eld_lambda.ELDCalculator : uses
+    eld_lambda.Generator <|-- eld_lambda.InputLoader : uses
 ```
 
 

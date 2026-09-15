@@ -1,3 +1,4 @@
+package eld_lambda;
 
 import java.util.*;
 
@@ -6,7 +7,7 @@ import java.util.*;
  * <p>Prompts the user to enter total load demand, number of generators,
  * and each generator's cost coefficients and capacity limits.
  *
- * <p>Creates and returns a list of Generator objects for further dispatch logic.
+ * <p>Creates and returns a list of eld_lambda.Generator objects for further dispatch logic.
  *
  * @author Sree Sai Nandini
  * @version 1.0
