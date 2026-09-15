@@ -23,7 +23,10 @@ jobs:
 
       - name: Run Checkstyle
         run: |
-          curl -O https://github.com
+          # Download the official Checkstyle JAR asset into the runner environment
+          curl -L -o checkstyle-10.12.1-all.jar https://github.com
+          
+          # Run the checkstyle analysis
           java -jar checkstyle-10.12.1-all.jar -c checkstyle.xml src/ || true
 
       # Safely finds all Java files recursively and passes them directly to the javadoc tool
