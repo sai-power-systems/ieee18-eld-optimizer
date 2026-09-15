@@ -1,3 +1,8 @@
+/**
+ * Main class to test the ELD Logic
+ *
+ * imports all the other modules and tests the application end to end
+ */
 package eld_lambda;
 
 import java.util.*;
